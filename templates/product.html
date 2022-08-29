@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <style>
+        .margin_bottom{
+            margin-bottom:10px;
+        }
+        table{
+            border:1px solid black;
+            border-collapse:collapse;
+            width:100%;
+        }
+        th,td{
+            border:1px solid black;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hello,</p>
+        <a href="logout">logout</a>
+    </div>
+
+    <h1>Add your product here</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Product link</label>
+        <div class="margin_bottom">
+            <input type="url" name="link">
+        </div>
+        <label>Product name</label>
+        <div class="margin_bottom">
+            <input type="text" name="product_name">
+        </div>
+        <label>Target price</label>
+        <div class="margin_bottom">
+            <input type="number" name="targ_price">
+        </div>
+        <div style="margin-bottom:20px">
+            <input type="submit" value="Add product">
+        </div>
+    </form>
+
+    <div>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Product name</th>
+                <th>Product link</th>
+                <th>Current price</th>
+                <th>Target price</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>mouse</td>
+                <td></td>
+                <td></td>
+                <td>1200</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
